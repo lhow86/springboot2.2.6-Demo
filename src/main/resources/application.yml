@@ -3,3 +3,8 @@ spring:
   profiles.active: devTest
 server:
   port: 8080
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml
+  level:
+    org.springframework: INFO
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: trace
