@@ -59,7 +59,7 @@ case "$1" in
       echo -e "\033[32m $APP_NAME already running \033[0m"
       exit 1
     fi
-   nohup $JAVA_HOME/bin/java -jar -server $JAVA_OPTIONS_INITIAL $JAVA_OPTIONS_MAX $JAVA_OPTIONS_PERMSIZE $JAVA_OPTIONS_MAX_PERMSIZE $_JAR_KEYWORDS > /dev/null 2>&1 &
+   nohup $JAVA_HOME/bin/java -jar -server $JAVA_OPTIONS_INITIAL $JAVA_OPTIONS_MAX $JAVA_OPTIONS_PERMSIZE $JAVA_OPTIONS_MAX_PERMSIZE $_JAR_KEYWORDS > output 2>&1 &
    echo -ne "\033[32m Starting \033[0m"
     for i in {1..20}; do
         echo -ne "\033[32m.\033[0m"
